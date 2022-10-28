@@ -2,15 +2,15 @@
 
 namespace ArgentCrusade\Flysystem\Selectel;
 
+use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Config;
-use League\Flysystem\AdapterInterface;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;
 use ArgentCrusade\Selectel\CloudStorage\Contracts\ContainerContract;
 use ArgentCrusade\Selectel\CloudStorage\Exceptions\FileNotFoundException;
 use ArgentCrusade\Selectel\CloudStorage\Exceptions\UploadFailedException;
 use ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
-class SelectelAdapter implements AdapterInterface
+class SelectelAdapter extends AbstractAdapter
 {
     use NotSupportingVisibilityTrait;
 
